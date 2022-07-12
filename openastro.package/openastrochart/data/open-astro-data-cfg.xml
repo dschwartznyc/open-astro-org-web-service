@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<openastrocfg>
+    <version>1.1.57</version>
+    <use_geonames.org>0</use_geonames.org>
+    <houses_system>P</houses_system>
+    <language>default</language>
+    <postype>geo</postype>
+    <chartview>traditional</chartview>
+    <zodiactype>tropical</zodiactype>
+</openastrocfg>

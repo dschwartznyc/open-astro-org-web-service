@@ -1,0 +1,4 @@
+include README.md
+include openastrochart/data/*.xml
+include openastromod/data/swisseph/*.cat
+include openastromod/data/swisseph/*.se1
