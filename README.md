@@ -45,7 +45,7 @@ Instructions to setup (assuming use of VS Code)
 	- http://your-gcp-url 
 	- will return: "Web Service for OpenAstro v1.1.57"
 		
-	And after editing invokeService.py to point at the GCP project
+	- And after editing invokeService.py to point at the GCP project
 
-	./test/invokeService.py 
-	will return the chart for Joanne Woodward
+	- ./test/invokeService.py 
+	- will return the chart for Joanne Woodward
