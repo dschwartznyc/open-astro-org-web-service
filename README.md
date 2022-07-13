@@ -11,41 +11,41 @@ Note that the original swisseph library is distributed under a dual licensing sy
 Instructions to setup (assuming use of VS Code)
 
 - uses ZSH scripts to build (will require changing the permission of these scripts to enable execution)
-- Requires python3.9 or higher and a docker environment 
+- Requires Python 3.9 or higher and a docker environment 
 - A valid project is required to run on gcp 
-- Setup a virtual Python environment (https://code.visualstudio.com/docs/python/environments)
-	python3 -m venv .venv
-	source ./.venv/bin/activate
+- Setup a virtual Python environment (https://code.visualstudio.com/docs/python/environments) in the project's root directory
+	- python3 -m venv .venv
+	- source ./.venv/bin/activate
 
-- Confirm that python is installed
-	which python
-	python --version 
+- Confirm that Python is installed
+	- which python (should point to the virtual environment setup above) 
+	- python --version (should be Python 3.9+)
 
-- Setup the development environment
-	./setDevEnv.zsh
+- Setup the development environment (loads required packages)
+	- ./setDevEnv.zsh
 
 - To build the python packages run:
-	./package-build.zsh
+	- ./package-build.zsh
 
 - To deploy to docker and run (on port 5000)
-	./docker-build.zsh
+	- ./docker-build.zsh
 
-	To test 
-		http://localhost:5000 
-			should return: "Web Service for OpenAstro v1.1.57"
+- To test 
+	- http://localhost:5000 
+	- will return: "Web Service for OpenAstro v1.1.57"
 
-		./test/invokeService.py 
-			will return the chart for Joanne Woodward
+	- ./test/invokeService.py 
+	- will return the chart for Joanne Woodward
 
 - To deploy to GCP
-	Edit  gcloud-build.zsh to point to the GCP project
-	./gloud-build.zsh
+	- Edit gcloud-build.zsh to point to the GCP project
+	- ./gloud-build.zsh
 
-	To test 
-		http://your-gcp-url 
-			should return: "Web Service for OpenAstro v1.1.57"
+- To test the GCP installation
+	- http://your-gcp-url 
+	- will return: "Web Service for OpenAstro v1.1.57"
 		
-		And after editing invokeService.py to point at the GCP project
+	And after editing invokeService.py to point at the GCP project
 
-		./test/invokeService.py 
-			will return the chart for Joanne Woodward
+	./test/invokeService.py 
+	will return the chart for Joanne Woodward
