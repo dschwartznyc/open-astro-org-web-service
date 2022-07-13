@@ -10,7 +10,7 @@ Note that the original swisseph library is distributed under a dual licensing sy
 
 Instructions to setup (assuming use of VS Code)
 
-- uses ZSH scripts to build (may require changing the permission of these scripts to enable execution)
+- uses ZSH scripts to build (will require changing the permission of these scripts to enable execution)
 - Requires python3.9 or higher and a docker environment 
 - A valid project is required to run on gcp 
 - Setup a virtual Python environment (https://code.visualstudio.com/docs/python/environments)
