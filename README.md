@@ -21,6 +21,9 @@ Instructions to setup (assuming use of VS Code)
 	- which python (should point to the virtual environment setup above) 
 	- python --version (should be Python 3.9+)
 
+- Change the permissions for the shell scripts
+	- chmod 744 *.zsh
+
 - Setup the development environment (loads required packages)
 	- ./setDevEnv.zsh
 
@@ -30,22 +33,24 @@ Instructions to setup (assuming use of VS Code)
 - To deploy to docker and run (on port 5000)
 	- ./docker-build.zsh
 
-- To test 
+- To test the docker deployment
 	- http://localhost:5000 
 	- will return: "Web Service for OpenAstro v1.1.57"
 
-	- ./test/invokeService.py 
+	- python ./test/invokeService.py 
 	- will return the chart for Joanne Woodward
 
-- To deploy to GCP
-	- Edit gcloud-build.zsh to point to the GCP project
+	- ./test/test-webservice-and-cleanup.zsh 
+	- will install needed packages, test the docker deployment and remove the packages
+
+- To deploy to GCP - after editing gcloud-build.zsh to point to the GCP project
 	- ./gloud-build.zsh
 
 - To test the GCP installation
 	- http://your-gcp-url 
 	- will return: "Web Service for OpenAstro v1.1.57"
 		
-	- And after editing invokeService.py to point at the GCP project
+	- And after editing invokeService.py to point to the GCP deployment
 
 	- ./test/invokeService.py 
 	- will return the chart for Joanne Woodward
