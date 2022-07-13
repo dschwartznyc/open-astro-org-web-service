@@ -74,9 +74,8 @@ def main (argv) :
 	#filename = None
 	
 	match_data = {}
-	root_dir  = '/Users/dls/projects/cc'
 
-	src_file   = root_dir + '/data/chart_file_data/Joanne_Woodward.oac'
+	src_file   = './test/Joanne_Woodward.oac'
 	# extract commmand line arguments
 	
 	#for arg, val in arguments :
